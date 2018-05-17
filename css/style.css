@@ -1,0 +1,20 @@
+.cabeca{
+    height: 150px !important;
+    margin-top: 0px;
+}
+.header {    
+    border-bottom: #bdc3c7 solid 2px;
+}
+
+h2 {
+    margin-top: 50px !important;    
+    margin-bottom: 50px !important;    
+    color: #bdc3c7 !important;
+    text-align: center;
+    /* margin-top: 100px; */
+}
+
+.corpo{
+    margin-top: 50px;
+}
+
