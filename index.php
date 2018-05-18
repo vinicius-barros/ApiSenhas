@@ -27,67 +27,61 @@
             <h2>Senhas dos sistemas ou e-mails</h2>
         </div>
         <div class="corpo">
-            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+
+            <form>
+
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <h3>Webmail Objeto</h3><br />
+                <div class="uk-margin">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Default">
+                </div>
+                <div class="uk-margin">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Default">
+                </div>
+                </div>
+
+                
+
+            </form>
+
+            <div class="uk-child-width-expand@s uk-text-center" uk-grid>                
+
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body ">
+                    <p style="font-size: 22px !important">Webmail Objeto</p><br />
                         <p class="text-left" style="font-size: 16px !important">                            
                             <b>Acesso:</b> <a href="http://webmail.objetocomunicacao.com.br" target="_blank">Webmail Objeto</a><br />
                             <b>Login:</b>&nbsp  suporte@objetocomunicacao.com.br<br />
                             <b>Senha:</b>&nbsp  <span> #melhor17suporte20#</span><br /><br />                            
-                        </p>
-                        
-                            <!-- <table class="uk-table uk-table-responsive uk-table-divider">
-                                    <tbody>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
+                        </p>   
                     </div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body">Item</div>
+                    <div class="uk-card uk-card-default uk-card-body ">
+                        <p style="font-size: 22px !important">Api Boletos</p><br />
+                        <p class="text-left" style="font-size: 16px !important">                            
+                            <b>Acesso:</b> <a href="http://www.apiboletos.com.br/" target="_blank">http://www.apiboletos.com.br/</a><br />
+	                        <b>Login:</b>&nbsp  suporte@objetocomunicacao.com.br<br />
+	                        <b>Senha:</b>&nbsp  objeto110120<br /><br />
+                         
+                        </p>   
+                    </div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body">Item</div>
+                    <div class="uk-card uk-card-default uk-card-body ">
+                        <p style="font-size: 22px !important">Terra a Vista</p><br />
+                        <p class="text-left" style="font-size: 16px !important">                            
+                            <b>Acesso:</b> <a href="http://suporte.tvconsultoria.com.br/" target="_blank">http://suporte.tvconsultoria.com.br/</a><br />
+	                        <b>Login:</b>&nbsp  objeto<br />
+	                        <b>Senha:</b>&nbsp  #Consult0r!a#      | TV@obj102030#!<br /><br />
+
+                         
+                        </p>   
+                    </div>
                 </div>
+                               
+                
             </div>
         </div> 
-        
-        <!-- <div class=" coluna col-col-md-12">
-            <style>
-              p{
-                position: relative;
-                min-height: 1px;
-                padding-right: 15px;
-                padding-left: 15px;
-                float: left;
-                width: 33.33333333%;
-               }
-               
-            </style> 
-            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>            
-                <p ><a href="http://dev17.103dns.com.br/website/index.php/PaginaDinamica/pagina/goiania" target="_self"><img alt="" src="http://dev17.103dns.com.br/website/public/imagem/gerenciador/teste_mmnvd_dev17/691047-970x600-1jpeg.jpeg" style="width: 400px; height: 247px;" /></a></p>    
-                        
-        </div> -->
     </section>
 </body>
 </html>
