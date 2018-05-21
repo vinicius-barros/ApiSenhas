@@ -13,9 +13,11 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
 
 
     <title>Senhas</title>
@@ -27,21 +29,7 @@
             <h2>Senhas dos sistemas ou e-mails</h2>
         </div>
         <div class="corpo">
-
-            <form>
-
-                <div>
-                <div class="uk-margin">
-                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Default">
-                </div>
-                <div class="uk-margin">
-                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Default">
-                </div>
-                </div>
-
-                
-
-            </form>
+            <div class="teste">+</div>
 
             <div class="uk-child-width-expand@s uk-text-center" uk-grid>                
 
@@ -78,7 +66,8 @@
                         </p>   
                     </div>
                 </div>
-                               
+
+                                               
                 
             </div>
         </div> 
