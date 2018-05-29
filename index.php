@@ -1,3 +1,10 @@
+<?php
+require 'Connect.php';
+$banco = Connect("localhost", "senhas", "root", "v123");
+$banco->query("SELECT *FROM categorias");
+
+?>
+
 <!DOCTYPE html>
 <html lang="pr-br">
 <head>
@@ -25,9 +32,14 @@
 </head>
 <body>
     <section>        
-        <div class="header">
-            <h1><i class="fas fa-key"></i></h1>
-            <h2>Senhas dos sistemas ou e-mails</h2>
+        <div class="header uk-flex uk-flex-center"  uk-grid>
+            <div class="">
+                <h1><i class="fab fa-keycdn"></i></h1>
+            </div>
+            <div class=" ">
+                <h2>Senhas e Scripts Suporte</h2>
+            </div>
+
         </div>
         <div class="corpo"> 
             <div class="uk-inline">
