@@ -15,17 +15,24 @@ class Connect
 	private	$dbpass = "v123";*/
 
 	public function  __construct ($host, $dbname, $dbuser, $dbpass)
-		{
+	{
 		try
 		{
 			$this->pdo= new PDO("mysql:host=".$host.";dbname=".$dbname, $dbuser, $dbpass);
-			echo "Connected to Successfully!";
+			
+			// echo "Connected to Successfully!";
 		}
 		catch(PDOException $e)
 		{
 			echo "Connection failed" . $e->getMessage();
 		}
-		}
+		
+	}
+
+	public function query($sql)
+	{
+		$query = $this->pdo->query($sql);
+	}
 }
 
 

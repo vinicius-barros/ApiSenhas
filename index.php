@@ -1,8 +1,7 @@
-<?php
-require 'Connect.php';
-$banco = Connect("localhost", "senhas", "root", "v123");
-$banco->query("SELECT *FROM categorias");
-
+<?php 
+    require "Classes/Connect.php";
+    $banco = new Connect("localhost", "senhas", "vinicius", "vs");
+    // $banco->query("SELECT *FROM categorias");
 ?>
 
 <!DOCTYPE html>
@@ -16,14 +15,14 @@ $banco->query("SELECT *FROM categorias");
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     
 
 
@@ -63,8 +62,15 @@ $banco->query("SELECT *FROM categorias");
                                 <div class="uk-width-1-2@s" style="margin-top:20px;">
                                     <input class="uk-input" type="text" placeholder="Senha">
                                 </div>
-                                <div class="uk-width-1-1" style="padding : 0 !important; margin-top:20px;">
-                                    <button class="uk-button uk-button-primary uk-align-left@s" type="submit"> Cadastrar</button>
+                                <div class="uk-width-1-2@s" style="padding : 0 !important;margin-top:20px;">
+                                    <select class="uk-select">
+                                        <option value="" disabled selected>Categorias</option>
+                                        <option value="">Masculino</option>
+                                        <option value="">Feminino</option>
+                                    </select>
+                                </div>
+                                <div class="uk-width-1-2@s" style="margin-top:20px;">
+                                    <button class="uk-button uk-button-primary uk-align-left@s uk-width-1-1" type="submit"> Cadastrar</button>
                                 </div>
                             </form>
                         </div>
