@@ -1,7 +1,19 @@
 <?php 
     require "Classes/Connect.php";
-    $banco = new Connect("localhost", "senhas", "vinicius", "vs");
-    // $banco->query("SELECT *FROM categorias");
+    $conexao = new Connect('localhost','senhas','root','');
+		if (isset($_POST['nome'])){
+		    var_dump($_POST);
+			$link = addslashes($_POST['link']);
+			$nome = addslashes($_POST['nome']);
+			$login = addslashes($_POST['login']);
+			$senha = addslashes($_POST['senha']);
+			$categoria = addslashes($_POST ['id_categoria']);
+
+			$conexao->query("INSERT INTO acessos SET link = '$link',nome='$nome',login='$login', senha='$senha', id_categoria='$categoria'");
+
+           }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -49,24 +61,33 @@
                             <div class="header-cadastrar"> Cadastrar</div>
 
                         </div> -->
-                        
+
+
                         <div class="uk-card-body">
                         <!-- <div class=" header-cadastrar">Cadastrar</div> -->
-                            <form class="form " uk-grid >
+                            <form class="form" action="" uk-grid  method="post" style="height: 100% !important">
                                 <div class="uk-width-1-1 " style="padding : 0;">
-                                    <input class="uk-input" type="text" placeholder="Link" >
+                                    <input class="uk-input" name="nome" type="text" placeholder="Nome" >
+                                </div>
+                                <div class="uk-width-1-1 " style="padding : 0; margin-top:20px;">
+                                    <input class="uk-input" name="link" type="text" placeholder="Link" >
                                 </div>
                                 <div class="uk-width-1-2@s" style="padding : 0; margin-top:20px;">
-                                    <input class="uk-input" type="text" placeholder="Nome">
+                                    <input class="uk-input" name="login" type="text" placeholder="Login">
                                 </div>
                                 <div class="uk-width-1-2@s" style="margin-top:20px;">
-                                    <input class="uk-input" type="text" placeholder="Senha">
+                                    <input class="uk-input" name="senha" type="password" placeholder="Senha">
                                 </div>
                                 <div class="uk-width-1-2@s" style="padding : 0 !important;margin-top:20px;">
-                                    <select class="uk-select">
+                                    <select name="id_categoria" class="uk-select">
                                         <option value="" disabled selected>Categorias</option>
-                                        <option value="">Masculino</option>
-                                        <option value="">Feminino</option>
+										<?php
+                                        $categorias = $conexao->query("select * from categorias");
+                                        foreach ($categorias as $categoria) {
+                                        ?>
+                                        <option value="<?php echo $categoria['id']?>"><?php echo $categoria['nome']?></option>
+                                        <?php } ?>
+
                                     </select>
                                 </div>
                                 <div class="uk-width-1-2@s" style="margin-top:20px;">
@@ -86,44 +107,22 @@
                 </div>
             </div> -->
 
-            <div class="uk-flex uk-flex-center  uk-text-center" uk-grid>                
-
+            <div class="uk-flex uk-flex-center  uk-text-center" uk-grid>
+				<?php
+				$acessos = $conexao->query("select * from acessos");
+				foreach ($acessos as $acesso) {
+				?>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body ">
-                    <p style="font-size: 22px !important">Webmail Objeto</p><br />
+                    <p style="font-size: 22px !important"><?php echo $acesso['nome']?></p><br />
                         <p class="text-left" style="font-size: 16px !important">                            
-                            <b>Acesso:</b> <a href="http://webmail.objetocomunicacao.com.br" target="_blank">Webmail Objeto</a><br />
-                            <b>Login:</b>&nbsp  suporte@objetocomunicacao.com.br<br />
-                            <b>Senha:</b>&nbsp  <span> #melhor17suporte20#</span><br /><br />                            
+                            <b>Acesso:</b> <a href="<?php echo $acesso['link']?>" target="_blank"><?php echo $acesso['nome']?></a><br />
+                            <b>Login:</b>&nbsp  <?php echo $acesso['login']?><br />
+                            <b>Senha:</b>&nbsp  <span><?php echo $acesso['senha']?></span><br /><br />
                         </p>   
                     </div>
                 </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body ">
-                        <p style="font-size: 22px !important">Api Boletos</p><br />
-                        <p class="text-left" style="font-size: 16px !important">                            
-                            <b>Acesso:</b> <a href="http://www.apiboletos.com.br/" target="_blank">http://www.apiboletos.com.br/</a><br />
-	                        <b>Login:</b>&nbsp  suporte@objetocomunicacao.com.br<br />
-	                        <b>Senha:</b>&nbsp  objeto110120<br /><br />
-                         
-                        </p>   
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body ">
-                        <p style="font-size: 22px !important">Terra a Vista</p><br />
-                        <p class="text-left" style="font-size: 16px !important">                            
-                            <b>Acesso:</b> <a href="http://suporte.tvconsultoria.com.br/" target="_blank">http://suporte.tvconsultoria.com.br/</a><br />
-	                        <b>Login:</b>&nbsp  objeto<br />
-	                        <b>Senha:</b>&nbsp  #Consult0r!a#      | TV@obj102030#!<br /><br />
-
-                         
-                        </p>   
-                    </div>
-                </div>
-
-                                               
-                
+                <?php }?>
             </div>
         </div> 
     </section>

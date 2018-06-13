@@ -32,6 +32,7 @@ class Connect
 	public function query($sql)
 	{
 		$query = $this->pdo->query($sql);
+		return $query;
 	}
 }
 
