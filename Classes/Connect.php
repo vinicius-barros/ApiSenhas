@@ -9,10 +9,7 @@
 class Connect
 {
 	private $pdo;
-	/*private $host = "localhost";
-	private $dbname = "senhas";
-	private $dbuser = "root";
-	private	$dbpass = "v123";*/
+
 
 	public function  __construct ($host, $dbname, $dbuser, $dbpass)
 	{
