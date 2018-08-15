@@ -1,12 +1,12 @@
 <div class="corpo">
   <div class="uk-inline">
-    <button class="back-to-top " uk-tooltip="title: Cadastrar" type="button"><span uk-icon="icon: lock; ratio: 1.3"></button>
+    <button class="back-to-top " uk-tooltip="title: Cadastrar" type="button"><span uk-icon="icon: cog; ratio: 1.3"></button>
     <div class="cadastro" uk-drop="pos: right-center; mode: click; offset: 10;">
       <div class="uk-card  uk-card-default">
 
 
-        <div class="uk-card-body">
-          <!-- <div class=" header-cadastrar">Cadastrar</div> -->
+        <div class="uk-card-body" style="padding: 10px 40px 40px 40px !important;">
+          <div class=" header-cadastrar">Cadastrar</div>
           <form class="form" action="" uk-grid method="post" style="height: 100% !important">
             <div class="uk-width-1-1 " style="padding : 0;">
               <input class="uk-input" name="nome" type="text" placeholder="Nome">
@@ -51,7 +51,7 @@
       <div>
         <div class="uk-card uk-card-default uk-card-body ">
           <p style="font-size: 22px !important"><?php echo $acesso['nome'] ?></p><br/>
-          <p class="text-left" style="font-size: 16px !important">
+          <p class="uk-text-left" style="font-size: 16px !important">
             <b>Acesso:</b> <a href="<?php echo $acesso['link'] ?>"
                               target="_blank"><?php echo $acesso['nome'] ?></a><br/>
             <b>Login:</b>&nbsp <?php echo $acesso['login'] ?><br/>

@@ -15,7 +15,8 @@ if (isset($_POST['nome'])) {
 if(isset($_POST['nome_empresas'])) {
   $nome_emp = addslashes($_POST['nome_empresas']);
   $link_emp = addslashes($_POST['link_empresas']);
-  $conexao->query("INSERT INTO empresas SET nome = '$nome_emp',link = '$link_emp'");
+  $senha_emp = addslashes($_POST['senha_empresas']);
+  $conexao->query("INSERT INTO empresas SET nome = '$nome_emp',link = '$link_emp',senha='$senha_emp'");
 }
 
 if(isset($_POST['nome_pessoas'])) {
@@ -74,8 +75,8 @@ if(isset($_POST['nome_pessoas'])) {
     <div class="uk-position-relative uk-margin-medium">
 
         <ul class="uk-child-width-expand" uk-tab>
-          <li class="uk-active"><a href="#"><span uk-icon="icon: lock; ratio: 1.3"></span> Senhas</a></li>
-          <li class="teste"><a href="#"><span uk-icon="icon:receiver; ratio: 1.3"></span> Clientes</a></li>
+          <li class="uk-active"><a href="#"><span uk-icon="icon: cog; ratio: 1.5"></span> Ferramentas</a></li>
+          <li class="teste"><a href="#"><span uk-icon="icon:receiver; ratio: 1.5"></span> Clientes</a></li>
 
         </ul>
 
@@ -86,15 +87,8 @@ if(isset($_POST['nome_pessoas'])) {
 
       <div class="uk-switcher uk-margin">
         <div class="uk-active">
-<!--          --><?php // include_once './includes/_senha.php'?>
-          <?php  include_once 'testes.html'?>
-
-
-
-
-
-
-
+          <?php include_once './includes/_senha.php'?>
+<!--          --><?php //include_once 'testes.html'?>
         </div>
 
         <div class="teste">
